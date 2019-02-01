@@ -1,0 +1,7 @@
+const createServer = require('../main/server');
+const argv = require('minimist')(process.argv.slice(2));
+
+createServer({
+    elasticsearch: argv.es,
+    amqp: argv.amqp
+});
